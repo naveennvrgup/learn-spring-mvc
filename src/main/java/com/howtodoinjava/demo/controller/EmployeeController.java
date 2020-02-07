@@ -13,8 +13,9 @@ public class EmployeeController{
     @Autowired
     EmployeeManager manager;
 
-    @RequestMapping(value="/",method= RequestMethod.GET)
+    @RequestMapping(value="/")
     public String hellWorld(Model model){
+        model.addAttribute("message","spring mvc 3 hello world");
         return "helloworld";
     }
 
