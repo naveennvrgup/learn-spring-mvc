@@ -20,6 +20,7 @@
         <input type="text" placeholder="id" name="id">
         <input type="text" placeholder="firstName" name="firstName">
         <input type="text" placeholder="lastName" name="lastName">
+        <input type="text" placeholder="email" name="email">
         <button>Submit</button>
     </form>
     <table border="1">
@@ -27,12 +28,14 @@
             <th>Id</th>
             <th>First Name</th>
             <th>Last Name</th>
+            <th>email</th>
         </tr>
         <c:forEach items="${employees}" var="employee">
             <tr>
                 <td>${employee.id}</td>
                 <td>${employee.firstName}</td>
                 <td>${employee.lastName}</td>
+                <td>${employee.email}</td>
             </tr>
         </c:forEach>
     </table>

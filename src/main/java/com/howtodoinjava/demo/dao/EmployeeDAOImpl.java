@@ -15,6 +15,7 @@ public class EmployeeDAOImpl implements EmployeeDAO {
         one.setId(1);
         one.setFirstName("naveen");
         one.setLastName("sundar");
+        one.setEmail("naveen@gmail.com");
         employees.add(one);
 
 
@@ -22,6 +23,7 @@ public class EmployeeDAOImpl implements EmployeeDAO {
         two.setId(1);
         two.setFirstName("sangeeth");
         two.setLastName("soundar");
+        two.setEmail("soundar@gmail.com");
         employees.add(two);
     }
 
@@ -30,11 +32,12 @@ public class EmployeeDAOImpl implements EmployeeDAO {
         return employees;
     }
 
-    public void addEmployee(String firstname, String lastname, Integer id) {
+    public void addEmployee(String firstname, String lastname, Integer id, String email) {
         EmployeeVO emp=new EmployeeVO();
         emp.setId(id);
         emp.setFirstName(firstname);
         emp.setLastName(lastname);
+        emp.setEmail(email);
         employees.add(emp);
     }
 }

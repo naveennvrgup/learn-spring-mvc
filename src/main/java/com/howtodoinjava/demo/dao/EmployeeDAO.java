@@ -7,5 +7,5 @@ import com.howtodoinjava.demo.model.EmployeeVO;
 
 public interface EmployeeDAO {
     public List<EmployeeVO> getAllEmployees();
-    public void addEmployee(String firstname, String lastname, Integer id);
+    public void addEmployee(String firstname, String lastname, Integer id, String email);
 }

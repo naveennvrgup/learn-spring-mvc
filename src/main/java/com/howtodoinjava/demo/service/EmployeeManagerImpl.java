@@ -17,5 +17,5 @@ public class EmployeeManagerImpl implements EmployeeManager{
         return dao.getAllEmployees();
     }
 
-    public void addEmployee(String firstname, String lastname, Integer id){dao.addEmployee(firstname,lastname,id);}
+    public void addEmployee(String firstname, String lastname, Integer id, String email){dao.addEmployee(firstname,lastname,id,email);}
 }
