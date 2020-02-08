@@ -12,6 +12,16 @@
 </head>
 <body>
     <h2>All Employees In The System</h2>
+    <form action="/getAllEmployees" method="post">
+        <c:if test="${haserr}">
+            has err: <c:out value="${haserr}"></c:out>
+        </c:if>
+
+        <input type="text" placeholder="id" name="id">
+        <input type="text" placeholder="firstName" name="firstName">
+        <input type="text" placeholder="lastName" name="lastName">
+        <button>Submit</button>
+    </form>
     <table border="1">
         <tr>
             <th>Id</th>

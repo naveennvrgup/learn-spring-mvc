@@ -1,4 +1,5 @@
 package com.howtodoinjava.demo.dao;
+import java.lang.reflect.Constructor;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -7,10 +8,9 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public class EmployeeDAOImpl implements EmployeeDAO {
-    @Override
-    public List<EmployeeVO> getAllEmployees() {
-        List<EmployeeVO> employees = new ArrayList<EmployeeVO>();
+    List<EmployeeVO> employees = new ArrayList<EmployeeVO>();
 
+    EmployeeDAOImpl(){
         EmployeeVO one=new EmployeeVO();
         one.setId(1);
         one.setFirstName("naveen");
@@ -23,7 +23,18 @@ public class EmployeeDAOImpl implements EmployeeDAO {
         two.setFirstName("sangeeth");
         two.setLastName("soundar");
         employees.add(two);
+    }
 
+    @Override
+    public List<EmployeeVO> getAllEmployees() {
         return employees;
+    }
+
+    public void addEmployee(String firstname, String lastname, Integer id) {
+        EmployeeVO emp=new EmployeeVO();
+        emp.setId(id);
+        emp.setFirstName(firstname);
+        emp.setLastName(lastname);
+        employees.add(emp);
     }
 }

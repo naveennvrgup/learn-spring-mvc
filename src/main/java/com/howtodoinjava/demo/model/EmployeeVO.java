@@ -1,13 +1,19 @@
 package  com.howtodoinjava.demo.model;
 
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
 import java.io.Serializable;
 
 public  class  EmployeeVO implements Serializable{
     private  static final long serialVersionUID=1L;
 
+
     private Integer id;
+    @Size(min=3,max=20)
     private String firstName;
+    @Size(min=3,max=20)
     private String lastName;
+    @Pattern(regexp = ".+@.+\\.[a-z]+")
 
     public Integer getId() {
         return id;
